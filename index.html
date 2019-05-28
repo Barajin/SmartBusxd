@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SmartBus</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500" rel="stylesheet">
+
+	<link rel="stylesheet" href="vendor/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<link rel="stylesheet" href="vendor/owl-carousel/owl.theme.default.min.css">
+	<link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- ================Offcanvus Menu Area =================-->
+	<div class="side_menu">
+			<ul class="list menu_right">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="about.html">Acerca de nosotros</a>
+				</li>
+				<li>
+					<a href="projects.html">Proyectos a futuro</a>
+				</li>
+				<li>
+					<a href="app.html">App</a>
+				</li>
+					
+	</div>
+	<!--================End Offcanvus Menu Area =================-->
+
+	<!--================Canvus Menu Area =================-->
+	<div class="canvus_menu">
+		<div class="container">
+			<div class="float-right">
+				<div class="toggle_icon" title="Menu Bar">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================End Canvus Menu Area =================-->
+  <header>
+    <div class="hero">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="">
+      </a>
+      
+      <div class="owl-carousel owl-theme heroCarousel">
+        <div class="item">
+          <div class="hero__slide">
+            <img src="img/elements/cul1.jpg" alt="">
+            <div class="hero__slideContent text-center">
+              <h1>Smart Bus</h1>
+              <p>Intuitivo y amigable con el usuario promedio</p>
+							<a class="btn btn--leftBorder btn--rightBorder" href="app.html">>Details</a>							
+							<span class="hero__slideContent--right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="hero__slide">
+            <img src="img/elements/puente.jpg" alt="">
+            <div class="hero__slideContent text-center">
+              <h1>Smart Bus</h1>
+              <p>Monitorea en tiempo real, verifica horas de llegada y lleva un registro de los viajes de tus vehículos.</p>
+							<a class="btn btn--leftBorder btn--rightBorder" href="app.html">Entrar a la plataforma</a>
+							<span class="hero__slideContent--right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="hero__slide">
+            <img src="img/elements/culiacan.jpg" alt="">
+            <div class="hero__slideContent text-center">
+              <h1>Smart Bus</h1>
+              <p>Fácil y sencillo de utilizar</p>
+							<a class="btn btn--leftBorder btn--rightBorder" href="app.html">Entrar a la plataforma</a>							
+							<span class="hero__slideContent--right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+	<footer class="footer footer-bg">
+		<div class="container">
+			
+
+				<div class="col-sm-8 col-lg-4 mb-4 mb-lg-0 text-left">
+					<h3 class="footer__title">Solicita una demo</h3>
+					<p>Para demostraciones y contrataciones, ingresa tu correo y nosotros te contactaremos</p>
+					<form action="" class="form-subscribe">
+						<div class="input-group">
+							<input type="email" class="form-control" placeholder="Dirección de contacto" required>
+							<div class="input-group-append">
+								<button class="btn-append" type="submit"><i class="lnr lnr-arrow-right"></i></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="d-sm-flex justify-content-between footer__bottom top-border">
+				
+				<ul class="social-icons mt-2 mt-sm-0">
+					<li><a href="#/"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="#/"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#/"><i class="fab fa-dribbble"></i></a></li>
+					<li><a href="#/"><i class="fab fa-behance"></i></a></li>					
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>	
+	<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+
+	<script>
+		var testimonialCarousel = $('.testimonialCarousel');
+      testimonialCarousel.owlCarousel({
+      loop:true,
+      margin:80,
+      startPosition: 2,
+      nav: false,
+      responsiveClass:true,
+      responsive:{
+        0:{
+            items:1
+        },
+        1000:{
+            items:2,
+            loop:true
+        }
+      }
+    });
+
+    var heroCarousel = $('.heroCarousel');
+      heroCarousel.owlCarousel({
+      loop:true,
+      margin:10,
+      nav: false,
+      startPosition: 1,
+      responsiveClass:true,
+      responsive:{
+        0:{
+            items:1
+        }
+      }
+	});
+
+	var dropToggle = $('.menu_right > li').has('ul').children('a');
+	dropToggle.on('click', function() {
+		dropToggle.not(this).closest('li').find('ul').slideUp(200);
+		$(this).closest('li').children('ul').slideToggle(200);
+		return false;
+	});
+
+	$( ".toggle_icon" ).on('click', function() {
+		$( 'body' ).toggleClass( "open" );
+	});
+
+	</script>
+</body>
+</html>
